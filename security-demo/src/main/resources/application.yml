@@ -11,3 +11,8 @@ spring:
 security:
   basic:
     enabled: false
+
+management:
+  health:
+    redis:
+      enabled: false
