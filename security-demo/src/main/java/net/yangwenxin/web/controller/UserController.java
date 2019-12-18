@@ -1,6 +1,8 @@
 package net.yangwenxin.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import net.yangwenxin.dto.User;
 import net.yangwenxin.dto.UserQueryCondition;
 import org.springframework.validation.BindingResult;
@@ -43,6 +45,7 @@ public class UserController {
 
     @GetMapping
     @JsonView(User.UserSimpleView.class)
+    @ApiOperation("用户查询服务")
     public List<User> query(UserQueryCondition condition) {
         List<User> users = new ArrayList<>();
         users.add(new User());
@@ -53,7 +56,7 @@ public class UserController {
 
     @GetMapping("/{id:\\d+}")
     @JsonView(User.UserDetailView.class)
-    public User getInfo(@PathVariable String id) {
+    public User getInfo(@ApiParam("用户id") @PathVariable String id) {
 //        throw new UserNotExistException(id);
 
         System.out.println("进入getInfo服务");
