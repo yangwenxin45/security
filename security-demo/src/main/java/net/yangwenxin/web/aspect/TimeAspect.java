@@ -3,10 +3,9 @@ package net.yangwenxin.web.aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
+//@Component
 public class TimeAspect {
 
     @Around("execution(* net.yangwenxin.web.controller.UserController.*(..))")
