@@ -8,11 +8,16 @@ spring:
   session:
     store-type: none
 
-security:
-  basic:
-    enabled: false
+#security:
+#      basic:
+#        enabled: false
 
 management:
   health:
     redis:
       enabled: false
+
+yangwenxin:
+  security:
+    browser:
+      loginPage: /demo-signIn.html
