@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.yangwenxin.dto.User;
 import net.yangwenxin.dto.UserQueryCondition;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    @GetMapping("/me")
+    public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails) {
+//        return SecurityContextHolder.getContext().getAuthentication();
+        return userDetails;
+    }
 
     @PostMapping
     public User create(@Valid @RequestBody User user, BindingResult errors) {
