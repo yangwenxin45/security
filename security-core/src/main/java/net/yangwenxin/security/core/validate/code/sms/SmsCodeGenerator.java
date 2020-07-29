@@ -1,8 +1,10 @@
-package net.yangwenxin.security.core.validate.code;
+package net.yangwenxin.security.core.validate.code.sms;
 
 import lombok.Getter;
 import lombok.Setter;
 import net.yangwenxin.security.core.properties.SecurityProperties;
+import net.yangwenxin.security.core.validate.code.ValidateCode;
+import net.yangwenxin.security.core.validate.code.ValidateCodeGenerator;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -3,6 +3,7 @@ package net.yangwenxin.security.core.validate.code;
 import lombok.Getter;
 import lombok.Setter;
 import net.yangwenxin.security.core.properties.SecurityProperties;
+import net.yangwenxin.security.core.validate.code.image.ImageCode;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;

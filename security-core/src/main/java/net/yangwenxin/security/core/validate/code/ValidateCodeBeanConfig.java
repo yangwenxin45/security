@@ -1,6 +1,7 @@
 package net.yangwenxin.security.core.validate.code;
 
 import net.yangwenxin.security.core.properties.SecurityProperties;
+import net.yangwenxin.security.core.validate.code.image.ImageCodeGenerator;
 import net.yangwenxin.security.core.validate.code.sms.DefaultSmsCodeSender;
 import net.yangwenxin.security.core.validate.code.sms.SmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;

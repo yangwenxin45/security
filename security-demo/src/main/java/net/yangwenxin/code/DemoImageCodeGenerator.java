@@ -1,7 +1,7 @@
 package net.yangwenxin.code;
 
-import net.yangwenxin.security.core.validate.code.ImageCode;
 import net.yangwenxin.security.core.validate.code.ValidateCodeGenerator;
+import net.yangwenxin.security.core.validate.code.image.ImageCode;
 import org.springframework.web.context.request.ServletWebRequest;
 
 //@Component("imageCodeGenerator")
