@@ -1,39 +1,28 @@
 package net.yangwenxin.security.core.validate.code;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class ImageCode {
+@Setter
+@Getter
+public class ImageCode extends ValidateCode {
 
     /**
      * 图片
      */
     private BufferedImage image;
 
-    /**
-     * 随机数
-     */
-    private String code;
-
-    /**
-     * 过期时间
-     */
-    private LocalDateTime expireTime;
-
     public ImageCode(BufferedImage image, String code, int expireIn) {
+        super(code, expireIn);
         this.image = image;
-        this.code = code;
-        this.expireTime = LocalDateTime.now().plusSeconds(expireIn);
     }
 
-    public boolean isExpired() {
-        return LocalDateTime.now().isAfter(expireTime);
+    public ImageCode(BufferedImage image, String code, LocalDateTime expireIn) {
+        super(code, expireIn);
+        this.image = image;
     }
+
 }

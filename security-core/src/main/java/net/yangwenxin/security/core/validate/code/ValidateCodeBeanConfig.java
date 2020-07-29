@@ -1,6 +1,8 @@
 package net.yangwenxin.security.core.validate.code;
 
 import net.yangwenxin.security.core.properties.SecurityProperties;
+import net.yangwenxin.security.core.validate.code.sms.DefaultSmsCodeSender;
+import net.yangwenxin.security.core.validate.code.sms.SmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +20,12 @@ public class ValidateCodeBeanConfig {
         ImageCodeGenerator codeGenerator = new ImageCodeGenerator();
         codeGenerator.setSecurityProperties(securityProperties);
         return codeGenerator;
+    }
+
+    @Bean
+    @ConditionalOnMissingBean(SmsCodeSender.class)
+    public SmsCodeSender SmsCodeSender() {
+        return new DefaultSmsCodeSender();
     }
 
 }
