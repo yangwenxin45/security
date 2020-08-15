@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 /**
  * 图形验证码处理器
  */
-@Component("imageCodeProcessor")
+@Component("imageValidateCodeProcessor")
 public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode> {
 
     /**
@@ -19,4 +19,5 @@ public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode>
     protected void send(ServletWebRequest request, ImageCode imageCode) throws Exception {
         ImageIO.write(imageCode.getImage(), "JPEG", request.getResponse().getOutputStream());
     }
+
 }
