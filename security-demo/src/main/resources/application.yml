@@ -35,3 +35,13 @@ management:
 #        width: 100
 #        url: /user/*
 
+yang:
+  security:
+    social:
+      qq:
+        app-id:
+        app-secret:
+        providerId: callback.do
+      filterProcessesUrl: /qqLogin
+    browser:
+      signUpUrl: /demo-signUp.html
