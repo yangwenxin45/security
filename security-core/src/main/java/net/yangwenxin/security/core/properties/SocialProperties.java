@@ -11,4 +11,6 @@ public class SocialProperties {
 
     private String filterProcessesUrl = "/auth";
 
+    private WeixinProperties weixin = new WeixinProperties();
+
 }
