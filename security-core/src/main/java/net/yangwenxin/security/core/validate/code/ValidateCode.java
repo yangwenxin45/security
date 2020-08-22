@@ -5,14 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ValidateCode {
+public class ValidateCode implements Serializable {
 
+    private static final long serialVersionUID = 7718744909787853257L;
     /**
      * 随机数
      */
