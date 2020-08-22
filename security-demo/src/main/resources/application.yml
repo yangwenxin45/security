@@ -1,5 +1,9 @@
+
 server:
   port: 8080
+  session:
+    # 单位秒，最小一分钟
+    timeout: 60
 
 spring:
   datasource:

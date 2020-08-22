@@ -13,4 +13,6 @@ public class BrowserProperties {
 
     private int rememberMeSeconds = 3600;
 
+    private SessionProperties session = new SessionProperties();
+
 }
