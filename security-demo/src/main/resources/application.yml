@@ -55,4 +55,5 @@ yang:
         app-secret: 60f78681d063590a469f1b297feff3c4
     browser:
       signUpUrl: /demo-signUp.html
+      signOutUrl: /demo-logout.html
 

@@ -15,4 +15,6 @@ public class BrowserProperties {
 
     private SessionProperties session = new SessionProperties();
 
+    private String signOutUrl;
+
 }
