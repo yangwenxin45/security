@@ -2,7 +2,7 @@ package net.yangwenxin.security.browser.logout;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import net.yangwenxin.security.browser.support.SimpleResponse;
+import net.yangwenxin.security.core.support.SimpleResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;

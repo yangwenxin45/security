@@ -1,4 +1,4 @@
-package net.yangwenxin.security.browser.support;
+package net.yangwenxin.security.core.support;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

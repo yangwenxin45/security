@@ -8,7 +8,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/security?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3306/security?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true
     username: root
     password: admin
 
@@ -56,4 +56,8 @@ yang:
     browser:
       signUpUrl: /demo-signUp.html
       signOutUrl: /demo-logout.html
-
+security:
+  oauth2:
+    client:
+      client-id: yang
+      client-secret: yangsecret

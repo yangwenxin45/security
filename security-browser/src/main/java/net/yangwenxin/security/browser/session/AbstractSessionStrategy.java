@@ -2,7 +2,7 @@ package net.yangwenxin.security.browser.session;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import net.yangwenxin.security.browser.support.SimpleResponse;
+import net.yangwenxin.security.core.support.SimpleResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.web.DefaultRedirectStrategy;
